@@ -43,7 +43,7 @@ object Compressor {
         val mediaMetadataRetriever = MediaMetadataRetriever()
         try {
             mediaMetadataRetriever.setDataSource(source)
-        } catch (exception: IllegalArgumentException) {
+        } catch (exception: Exception) {
             return Result(
                 success = false,
                 failureMessage = "Source path: $source can be invalid! or you don't have READ_EXTERNAL_STORAGE permission"
